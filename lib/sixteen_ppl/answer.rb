@@ -4,7 +4,7 @@ module SixteenPpl
 
     def initialize(aspect, user_input)
       @aspect_name = aspect
-      @aspect = user_input =~ /s/ ? aspect : aspect.inversion
+      @aspect      = user_input =~ /s/ ? aspect : aspect.inversion
     end
   end
 end

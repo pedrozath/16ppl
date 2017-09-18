@@ -11,8 +11,8 @@ This repo has no official relation to NERIS.
 To use it:
   `ruby lib/sixteen_ppl.rb`
 
-The questions are in portuguese. Fuck you.
+The questions are in portuguese.
 
 ## To contribute
 
-Fuck you
+Write specs, write more questions. Find your way, bitch!

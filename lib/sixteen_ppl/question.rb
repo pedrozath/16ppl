@@ -1,9 +1,10 @@
 module SixteenPpl
   class Question
-    attr_reader :aspect, :sentence, :answer, :weight
+    attr_reader :aspect, :sentence, :answer, :weight, :type
 
-    def initialize(aspect_name, weight, sentence)
-      @aspect   = Aspect.new(aspect_name, weight)
+    def initialize(trait, type, sentence)
+      @aspect   = Aspect.new(trait.aspect, trait.polarity)
+      @type     = type
       @sentence = sentence
       @weight   = weight
     end

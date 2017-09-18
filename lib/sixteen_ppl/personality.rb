@@ -58,6 +58,20 @@ module SixteenPpl
       @type = get_type_from_results(results)
     end
 
+    def to_s
+      "#{@acronym} / #{role} with #{strategy}"
+    end
+
+    def role
+      ROLES[:"#{acronym.downcase[0..3]}"]
+    end
+
+    def strategy
+      STRATEGIES.select {|s| acronym =~ s[:matcher]}.first[:name]
+    end
+
+    private
+
     def get_type_from_results(results)
       acronym = []
       CODE.each do |aspect_name, letters|
@@ -70,16 +84,5 @@ module SixteenPpl
       @acronym = acronym.join
     end
 
-    def to_s
-      "#{@acronym} / #{role} with #{strategy}"
-    end
-
-    def role
-      ROLES[:"#{acronym.downcase[0..3]}"]
-    end
-
-    def strategy
-      STRATEGIES.select {|s| acronym =~ s[:matcher]}.first[:name]
-    end
   end
 end
