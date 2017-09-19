@@ -6,7 +6,7 @@ module SixteenPpl
       @aspect   = Aspect.new(trait.aspect, trait.polarity)
       @type     = type
       @sentence = sentence
-      @weight   = weight
+      @weight   = trait.polarity
     end
 
     def ask

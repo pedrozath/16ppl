@@ -11,8 +11,7 @@ module SixteenPpl
     end
 
     def discover
-      puts @questions.first.answer
-      Personality.new *@questions.map(&:ask)
+      Personality.new *@questions.shuffle.map(&:ask)
     end
   end
 end

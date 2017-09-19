@@ -55,6 +55,8 @@ module SixteenPpl
         results[answer.aspect.name] += answer.aspect.weight
       end
 
+      puts results.inspect
+
       @type = get_type_from_results(results)
     end
 
